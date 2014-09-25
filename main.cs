@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 
 class main
 {
-    [StructLayoutAttribute(LayoutKind.Sequential)]
+    [StructLayoutAttribute(LayoutKind.Explicit)]
     class managed
     {
-        public uint a;
-        public uint b;
-        public uint c;
+        [FieldOffset(0)] public uint a;
+        [FieldOffset(4)] public uint b;
+        [FieldOffset(8)] public uint c;
     }
 
     unsafe public static void Main()

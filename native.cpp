@@ -17,12 +17,14 @@ int foo_2(int a, const char* b)
     return 0;
 }
 
+#pragma pack(1)
 struct unmanaged
 {
     unsigned int a;
     unsigned int b;
     unsigned int c;
 };
+#pragma pack()
 
 int foo_3(const void* managed)
 {
